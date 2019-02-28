@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Films from './components/Films';
+
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      films: []
+    };
+  }
+
+  componentDidMount() {
+    fetch('https://ghibliapi.herokuapp.com/films')
+      .then(response => response.json())
+      .then(responseData => {
+        this.setState({ films: responseData });
+      })
+  }
+
   render() {
+   
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+         <Films films={this.state.films} />
       </div>
     );
   }
 }
 
 export default App;
+ 
