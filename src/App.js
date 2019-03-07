@@ -7,20 +7,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      films: []
+      films: [],
+      people: []
     };
   }
 
-  componentDidMount() {
-    fetch('https://ghibliapi.herokuapp.com/films')
-      .then(response => response.json())
-      .then(responseData => {
-        this.setState({ films: responseData });
-      })
+  async getData(url, key) {
+    let response = await fetch(url)
+    let json = await response.json()
+    this.setState({ [key]: json }); 
+  }
+  async componentDidMount() { 
+    await this.getData('https://ghibliapi.herokuapp.com/films', 'films') 
+    await this.getData('https://ghibliapi.herokuapp.com/people', 'people')
   }
 
-  render() {
-   
+  render() {   
     return (
       <div className="App">
          <Films films={this.state.films} />

@@ -4,14 +4,12 @@ import Film from './Film';
 class Films extends Component {
   render () {
     return (
-      <div>
-        <ul>
+      <div>        
           {this.props.films.map(f => (
-            <li key={f.id}>
-              <Film title={f.title} description={f.description}/> 
-            </li>
-          ))}
-        </ul>
+            <div key={f.id}>
+              <Film film={f} /> 
+            </div>
+          ))}        
       </div>
     )
   }
