@@ -14,7 +14,7 @@ class Film extends Component {
           {this.props.film.release_date}
         </div>
         <div>
-          {this.props.film.producer}
+          {this.props.film.director}
         </div>
       </div>
     )

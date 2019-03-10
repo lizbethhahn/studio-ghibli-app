@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import People from './People';
+import Person from './Person';
 
 class People extends Component {
   render () {
-    return (
+    return (      
       <div>        
-          {this.props.people.map(p => (
+          {this.props.people && this.props.people.map(p => (
             <div key={p.id}>
-              <People people={p} /> 
+              <Person person={p} /> 
             </div>
           ))}        
       </div>
