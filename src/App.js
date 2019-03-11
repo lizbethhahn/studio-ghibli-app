@@ -39,7 +39,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/films" component={ () => <Films films={this.state.films} /> } />
           <Route path="/people" component={ () => <People people={this.state.people} /> } />
-          <Route path="/locations" component={ () => <Locations location={this.state.location} /> } />
+          <Route path="/locations" component={ () => <Locations locations={this.state.locations} /> } />
         </div>
       </BrowserRouter>
     );
