@@ -6,7 +6,7 @@ import Films from './components/Films';
 import People from './components/People';
 import Locations from './components/Locations';
 import {
-  BrowserRouter,
+  HashRouter,
   Route
 } from 'react-router-dom';
 
@@ -33,15 +33,17 @@ class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Nav />
-          <Route exact path="/" component={Home} />
-          <Route path="/films" component={ () => <Films films={this.state.films} /> } />
-          <Route path="/people" component={ () => <People people={this.state.people} /> } />
-          <Route path="/locations" component={ () => <Locations locations={this.state.locations} /> } />
+          <div className="container">
+            <Route exact path="/" component={Home} />
+            <Route path="/films" component={() => <Films films={this.state.films} />} />
+            <Route path="/people" component={() => <People people={this.state.people} />} />
+            <Route path="/locations" component={() => <Locations locations={this.state.locations} />} />
+          </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

@@ -8,9 +8,8 @@ class Home extends Component {
           Studio Ghibli 
         </h2>
         <p>
-          The creations that came out of Studio Ghibli have been charming audiences for more than 30 years.  
-          Copy for placement only. Copy for placement only. Copy for placement only. Copy for placement only.
-          Copy for placement only.
+          Studio Ghibli is a Japanese animation studio located in Tokyo. The creations that have been released by Studio Ghibli have been charming audiences for more than 30 years.  
+          
         </p>
       </div>
     );
