@@ -26,9 +26,9 @@ class App extends Component {
     this.setState({ [key]: json });
   }
   async componentDidMount() {
-    await this.getData('https://ghibliapi.herokuapp.com/films', 'films')
-    await this.getData('https://ghibliapi.herokuapp.com/people', 'people')
-    await this.getData('https://ghibliapi.herokuapp.com/locations', 'locations')
+    await this.getData('https://ghibliapi.vercel.app/films', 'films')
+    await this.getData('https://ghibliapi.vercel.app/people', 'people')
+    await this.getData('https://ghibliapi.vercel.app/locations', 'locations')
   }
 
   render() {
