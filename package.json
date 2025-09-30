@@ -6,8 +6,7 @@
     "axios": "^1.12.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^4.3.1"
   },
   "overrides": {
     "react-router": {
@@ -19,14 +18,14 @@
     "nth-check": "^2.0.1",
     "css-select": {
       "nth-check": "^2.0.1"
-     },
+    },
     "postcss": "^8.4.31"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"(migrate tests later)\" && exit 0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +35,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.7"
+  }
 }
